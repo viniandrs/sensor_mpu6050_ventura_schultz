@@ -1,4 +1,4 @@
-# <NOME DO SENSOR> — Sensores na BitDogLab
+# MPU-6050 — Sensores na BitDogLab
 
 **Dupla:** Nome A (RA / @usuario), Nome B (RA / @usuario)  
 **Turma:** EA801 — 2025S2  

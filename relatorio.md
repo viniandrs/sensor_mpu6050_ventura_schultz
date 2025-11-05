@@ -28,7 +28,7 @@ Finalmente, para validar a aquisição de dados em tempo real e fornecer um feed
 
 ### VÍDEO DO TESTE
 
-(O vídeo do teste de exibição no OLED em tempo real está localizado na pasta `docs/`)
+![Teste em tempo real](https://drive.google.com/file/d/1gD9SJevcCQbEExIO9KTm7OWwcokUO7B3/view?usp=sharing)
 
 ## 4. Análise dos resultados
 
@@ -54,3 +54,4 @@ Este projeto forneceu lições aprendidas cruciais sobre a interpretação de da
 
 1.  InvenSense Inc. (2013). *MPU-6000 and MPU-6050 Product Specification*. Document Number: PS-MPU-6000A-00, Revision: 3.4. Disponível em: `https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf`.
 2.  Fruett, F. (2025). *Banco de Informações de Hardware (BIH) da BitDogLab V7*. Projeto Escola 4.0, Unicamp. Disponível no repositório oficial: `https://github.com/Fruett/BitDogLab`.
+

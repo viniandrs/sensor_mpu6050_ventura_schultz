@@ -42,7 +42,7 @@ A análise mais importante ocorre nos períodos de repouso (0-150ms e 300-1000ms
 
 No gráfico "Gyroscope Data" (filtrado), observa-se que, após o impacto, os eixos retornaram a valores de repouso estáveis, porém diferentes de zero (eixo X em ~+15 °/s, eixo Y em ~-10 °/s, e eixo Z em ~+5 °/s). Diferente do acelerômetro, esses valores não são resultado da inclinação estática, mas sim representam o "Zero-Rate Output" (ZRO) do sensor — um viés (bias) intrínseco do giroscópio. Essa é a linha de base de velocidade angular que o sensor reporta quando fisicamente parado. O gráfico "Temperature Data" (filtrado) confirma que a temperatura do sensor oscilou suavemente em torno de 41.85°C. Esta leitura elevada, significativamente acima da temperatura ambiente, é o resultado esperado do autoaquecimento do chip (consumo de ~3.8mA) e representa a temperatura interna do componente.
 
-Finalmente, os testes de validação com o display OLED foram bem-sucedidos. Os dados filtrados pela média móvel foram roteados para o display, que os exibiu em tempo real. Foi possível observar visualmente os valores do acelerômetro e giroscópio mudando instantaneamente em resposta ao movimento da placa, confirmando que o sistema de aquisição e processamento (filtro) estava funcional e capaz de operar de forma contínua, conforme demonstrado no vídeo de resultados.
+Finalmente, os testes de validação com o display OLED foram bem-sucedidos. Os dados filtrados pela média móvel foram roteados para o display, que os exibiu em tempo real. Foi possível observar visualmente os valores do acelerômetro e giroscópio mudando instantaneamente em resposta ao movimento da placa, confirmando que o sistema de aquisição e processamento (filtro) estava funcional e capaz de operar de forma contínua, conforme demonstrado no vídeo de resultados. Ainda, durante este teste de estresse, foi identificada uma limitação: ao movimentar o sensor de forma excessivamente rápida, o script apresentava uma mensagem de erro no display OLED. Isso indica uma falha na leitura I2C, possivelmente causada por uma sobrecarga no barramento ou porque o loop de aquisição, filtragem e exibição em MicroPython não foi rápido o suficiente para lidar com a taxa de dados gerada pelo movimento extremo, causando uma interrupção na comunicação.
 
 ## 5. Conclusão
 
@@ -54,6 +54,7 @@ Este projeto forneceu lições aprendidas cruciais sobre a interpretação de da
 
 1.  InvenSense Inc. (2013). *MPU-6000 and MPU-6050 Product Specification*. Document Number: PS-MPU-6000A-00, Revision: 3.4. Disponível em: `https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf`.
 2.  Fruett, F. (2025). *Banco de Informações de Hardware (BIH) da BitDogLab V7*. Projeto Escola 4.0, Unicamp. Disponível no repositório oficial: `https://github.com/Fruett/BitDogLab`.
+
 
 
 

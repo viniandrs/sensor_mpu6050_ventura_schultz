@@ -26,7 +26,7 @@
 - Observações (resistores, alimentação externa, níveis lógicos):
 
 **Tabela de conexões (imagem em `docs/`):**  
-![Conexões MPU-6050](https://github.com/viniandrs/sensor_mpu6050_ventura_schultz/blob/main/docs/tabela_conexoes_mpu6050.png)
+![Conexões MPU-6050](./docs/tabela_conexoes_mpu6050.png)
 
 **Observações:**
 
@@ -40,23 +40,66 @@ Conector: A conexão foi realizada no conector I2C 0 (J6) da BitDogLab.
 
 
 ## 3. Dependências
-- MicroPython/C versão:
+- MicroPython v1.26.0
 - Bibliotecas utilizadas:
+    - matplotlib      3.10.7
+    - mpremote        1.26.1
+    - numpy           2.3.3
+    - pandas          2.3.3
+
 - Como instalar (passo a passo):
+    1. Criar um venv e instalar as dependências listadas em requirements.txt:
+    ```bash
+    $ python -m venv .venv
+    $ source .venv/bin/activate
+    $ pip install --upgrade pip
+    $ pip install -r requirements.txt
+    ```
+
+    2. Copiar os arquivos da pasta lib para a memória do Pico:
+    ```bash
+    $ mpremote fs cp lib/* :
+    ```
 
 ## 4. Como executar
+
+Após transferir as bibliotecas para a memória do microcontrolador, basta rodar o arquivo main.py. Caso esteja utilizando a extensão MicroPico do VSCode:
+
+1. Aperte Ctrl+Shift+P e insira o comando "MicroPico: Initialize MicroPico Project"
+
+2. Abra o arquivo main.py
+
+3. Aperte o botão "run" na barra inferior da tela.
+
+4. Siga as instruções no monitor serial para realizar a coleta de dados.
+
+5. Após coletar os dados, o programa irá armazená-los na memória interna do microcontrolador no arquivo "mpu6050_data.csv"
+
+6. Para analisar os dados, copie o arquivo com os dados para o seu computador. Se você estiver utilizando o mpremote:
+
 ```bash
-# MicroPython (Thonny): copiar src/main.py para a placa e rodar
-# C (Pico SDK): ver docs/compilacao.md
+$ mpremote fs cp :mpu6050_data.csv your_data.csv
 ```
 
 ## 5. Exemplos de uso
-- `src/exemplo_basico.py` — leitura bruta  
-- `src/exemplo_filtrado.py` — leitura com média móvel  
-- `test/` — códigos de teste com instruções  
+- `src/exemplos/exemplo_basico.py` — Gráficos brutos  
+- `src/exemplos/exemplo_filtrado.py` — Gráficos com filtragem de média móvel 
 
 ## 6. Resultados e validação
-- Prints/plots, fotos do setup, limitações, ruídos, dicas.
+<figure>
+  <img src="docs/Setup.jpeg" alt="Setup">
+  <figcaption>Hardware pronto para uso.</figcaption>
+</figure>
+
+<figure>
+  <img src="docs/results/raw/plots_raw.png" alt="Raw signals">
+  <figcaption>Dados brutos.</figcaption>
+</figure>
+
+<figure>
+  <img src="docs/results/filtered/plots_filtered.png" alt="Filtered signals">
+  <figcaption>Dados filtrados com média móvel.</figcaption>
+</figure>
 
 ## 7. Licença
 - Ver arquivo `LICENSE`.
@@ -64,11 +107,11 @@ Conector: A conexão foi realizada no conector I2C 0 (J6) da BitDogLab.
 ---
 
 > **Checklist de entrega**
-> - [ ] README preenchido  
-> - [ ] Foto/diagrama em `docs/`  
-> - [ ] Código comentado em `src/`  
-> - [ ] Testes em `test/` com instruções  
-> - [ ] `relatorio.md` com lições aprendidas
+> - [X] README preenchido  
+> - [X] Foto/diagrama em `docs/`  
+> - [X] Código comentado em `src/`  
+> - [X] Testes em `test/` com instruções  
+> - [X] `relatorio.md` com lições aprendidas
 
 ## 📁 7. Estrutura do Repositório
 

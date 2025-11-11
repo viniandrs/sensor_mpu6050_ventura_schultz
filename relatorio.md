@@ -18,17 +18,20 @@ Finalmente, para validar a aquisição de dados em tempo real e fornecer um feed
 
 ## 3. Resultados
 
+### Imagem do Setup:
+![Setup](docs/Setup.jpeg)
+
 ### Gráficos dos resultados (brutos):
 
-![Gráficos Brutos](docs/graphs.png)
+![Gráficos Brutos](docs/results/raw/plots_raw.png)
 
 ### Gráficos dos resultados (filtrados):
 
-![Gráficos Filtrados](docs/plots_filtered.png)
+![Gráficos Filtrados](docs/results/filtered/plots_filtered.png)
 
 ### VÍDEO DO TESTE
 
-Teste em tempo real: `https://drive.google.com/file/d/1gD9SJevcCQbEExIO9KTm7OWwcokUO7B3/view?usp=sharing`
+Video com teste em tempo real [aqui](https://drive.google.com/file/d/1gD9SJevcCQbEExIO9KTm7OWwcokUO7B3/view?usp=sharing).
 
 ## 4. Análise dos resultados
 

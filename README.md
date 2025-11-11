@@ -1,4 +1,4 @@
-# <NOME DO SENSOR> — Sensores na BitDogLab
+# MPU-6050 — Sensores na BitDogLab
 
 **Dupla:** Vinicius Ventura Andreossi (195125 / @viniandrs), João Pedro Schultz Oliveira (206484 / @jpschultzoliveira)  
 **Turma:** EA801 — 2025S2  

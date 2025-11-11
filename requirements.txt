@@ -1,0 +1,4 @@
+matplotlib      3.10.7
+mpremote        1.26.1
+numpy           2.3.3
+pandas          2.3.3
